@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {   
+        public static void del(int x, int y)
+        {
+            int k = Math.Min(Math.Abs(x), Math.Abs(y));
+            do
+            {
+                if (x % k == 0 && y % k == 0)
+                {
+                    x /= k;
+                    y /= k;
+                    
+                }
+                k--;
+            } while (k!=0);
+
+            Console.WriteLine("It's: " + x + "/" + y);
+
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the first two numbers: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine('/');
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second two numbers: ");
+            int c = int.Parse(Console.ReadLine());
+            Console.WriteLine('/');
+            int d = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            //subirane
+            int x3 = (a * d) + (c * b);
+            int y3 = d * b;
+            del(x3, y3);
+
+            //razlika
+            int x1 = (a * d) - (c * b);
+            int y1 = d * b;
+            del(x1, y1);
+          
+
+            //deleno
+            int x = a * d;
+            int y = b * c;
+            del(x, y);
+            //umnojenie
+            int x2 = a * c;
+            int y2 = b * d;
+            del(x2, y2);
+            Console.ReadKey();
+        }
+    }
+}
