@@ -4,6 +4,7 @@ public class Program
 {
 	public static void Main()
 	{
+
 		Console.WriteLine("Rows: ");
 		int numRows = int.Parse(Console.ReadLine());
 		Console.WriteLine("Columns: ");
@@ -11,14 +12,30 @@ public class Program
 		int[,] array = new int[numRows, numColumns];
 		Console.WriteLine("Declaring the elements: ");
 		for(int i = 0; i<numRows; i++){
+			Console.WriteLine(i+1+": ");
 			for(int j = 0; j<numColumns; j++){
+				Console.Write("• ");
 				array[i,j] = int.Parse(Console.ReadLine());
 			}
+			
 		}
-		Console.WriteLine("---------------------");
+		Console.WriteLine("");
+		Console.WriteLine("-Table-- ");
 		for(int i = 0; i<numRows; i++){
+			Console.Write(i+1 +": ");
 			for(int j = 0; j<numColumns; j++){
-				Console.WriteLine(array[i,j]);
+				
+				Console.Write(array[i,j] + " ");
+			}
+			Console.WriteLine();
+		}
+		Console.WriteLine();
+		Console.WriteLine("Even nums: ");
+				for(int i = 0; i<numRows; i++){
+			for(int j = 0; j<numColumns; j++){
+				if(Math.Abs(array[i,j]) % 2 == 0){
+					Console.Write(array[i,j]+" ");
+				}
 			}
 		}
 	}
