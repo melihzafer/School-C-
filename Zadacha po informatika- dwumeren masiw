@@ -1,0 +1,83 @@
+using System;
+					
+public class Program
+{
+	public static int Method(int[,] newArray, int numA, int numB){
+	int br = 0;
+	int s = newArray[0,0];
+		for(int i = 0; i<numA; i++){
+			for(int j = 0; j<numB; j++){
+				if(newArray[i,j] < s){
+				s = newArray[i,j];		
+				br++;
+				}	
+			}
+		}
+			return s;
+	}
+	public static void Main()
+	{
+		Console.WriteLine("Instert numA and numB: ");
+		Console.WriteLine("-numA: ");
+		int numA = int.Parse(Console.ReadLine());
+		Console.WriteLine("-numB: ");
+		int numB = int.Parse(Console.ReadLine());
+		Console.WriteLine("--------------------");
+		int[,] newArray = new int[numA,numB];
+		
+		for(int i = 0; i<numA; i++){
+			Console.WriteLine(i+1 + ":----");
+			for(int j = 0; j<numB; j++){
+				Console.Write(j+1 + ": ");
+				newArray[i,j] = int.Parse(Console.ReadLine());		
+			}
+		}
+		//a
+		int br = 0;
+		for(int i = 0; i<numA; i++){
+			for(int j = 0; j<numB; j++){
+				if(newArray[i,j] < 10){
+				br++;
+				}	
+			}
+		}
+		Console.WriteLine("The number of elements of the array less than 10 is " + br);
+		//b
+				int sum = 1;
+		for(int i = 0; i<numA; i++){
+			for(int j = 0; j<numB; j++){
+				if(newArray[i,j] % 7 ==0){
+				sum *= newArray[i,j];
+				}	
+			}
+		}
+		Console.WriteLine("The product of multiples of 7 elements of the array is " + sum);
+		//c
+				int br1 = 0;
+		Console.WriteLine("The negative elements of the array are: ");
+		for(int i = 0; i<numA; i++){
+			for(int j = 0; j<numB; j++){
+				if(newArray[i,j] < 0){
+				br1++;
+					Console.Write(newArray[i,j] + " ");
+				}	
+			}
+		}
+		Console.WriteLine();
+		if(br1 ==0){
+		Console.WriteLine("There is no negative elements!");
+		}
+		//d
+		Console.WriteLine("Table: ");
+		for(int i = 0; i<numA; i++){
+			for(int j = 0; j<numB; j++){
+				Console.Write(newArray[i,j] + " ");
+						
+			}
+			Console.WriteLine();
+		}
+		//e
+		Console.WriteLine("Min: " + Method(newArray, numA, numB));
+		
+	}
+}
