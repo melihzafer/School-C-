@@ -1,0 +1,90 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	  Console.WriteLine( "Type the lenght of th array: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type the elements of the array: ");
+            int[,] array = new int[n, n];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    array[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("------------------------------");
+            int sum = 0;
+          int z = array[0,0];
+            int br = 0;
+			int b = 0;
+			int pr = 1;
+		  for (int i = 0; i < n; i++)
+            {
+                for (int j  = 0; j  <n; j ++)
+                {
+          
+
+					Console.Write(array[i, j] + " ");
+					 if (i > j )
+                    {
+						
+                       if ( array[i,j] < z)
+						{
+						z = array[i,j];
+						}
+                    }
+				
+				
+				
+				}
+Console.WriteLine();			
+		  
+		  }
+
+		Console.WriteLine("Chetni chisla na vtorichniq: ");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j  = 0; j  <n; j ++)
+                {
+                    
+                    if (i == j && array[i, j] % 2 ==0)
+                    {
+                        br++;
+                    }
+                   
+					if( i+j >= n )
+                    {
+                       pr*=array[i,j];
+                    }
+                    if(i+j == n -1)
+                    {
+                       if(array[i, j]%2==0)
+					   {
+						   Console.Write(array[i,j] + " ");
+                   	   }
+						if(array[i,j]%2!=0)
+						{
+							b++;
+						}
+					}
+                   
+                }
+               
+            }
+          
+                    Console.WriteLine();
+		 if(b==n){
+		  Console.WriteLine("Nqma");
+		  }
+            Console.WriteLine("Min pod glavniq: " + z);
+            Console.WriteLine("Broqt na chetnite elementite warhu glawniq: " + br);
+			Console.WriteLine("Proizwedenieto na elementite pod wtorichniq: " + pr);
+         
+			  
+
+          
+	}
+}
