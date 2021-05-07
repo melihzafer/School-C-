@@ -1,0 +1,56 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		  Console.WriteLine( "Type the lenght of th array: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type the elements of the array: ");
+            int[,] array = new int[n, n];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    array[i, j] = int.Parse(Console.ReadLine());
+                }
+				
+            }
+            Console.WriteLine("------------------------------");
+           
+          int z = array[0,0];
+		 int x = array[0,0];
+		  for (int i = 0; i < n; i++)
+            {
+                for (int j  = 0; j  <n; j ++)
+                {
+          
+
+					Console.Write(array[i, j] + " ");
+					 if (i == j )
+                    {
+						
+                       if ( array[i,j] < z)
+						{
+						z = array[i,j];
+						}
+                    }	
+					 if (i+j == n -1)
+                    {
+						
+                       if ( array[i,j] > x)
+						{
+						x = array[i,j];
+						}
+                    }
+				}
+			  Console.WriteLine();
+		  }
+		
+
+		
+		Console.WriteLine("Nai-malkoto chislo ot glawniq diogonoal: " + z);
+		Console.WriteLine("Nai-golqmoto chislo ot vtorichniq diogonal: " + x);
+		Console.WriteLine("Sbora im: " + (z+x));
+	}
+}
