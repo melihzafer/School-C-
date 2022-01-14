@@ -1,0 +1,10 @@
+D:\11b\Мелих\zadachi_za_podgotowka\bin\Debug\zadachi_za_podgotowka.exe.config
+D:\11b\Мелих\zadachi_za_podgotowka\bin\Debug\zadachi_za_podgotowka.exe
+D:\11b\Мелих\zadachi_za_podgotowka\bin\Debug\zadachi_za_podgotowka.pdb
+D:\11b\Мелих\zadachi_za_podgotowka\obj\Debug\zadachi_za_podgotowka.csproj.AssemblyReference.cache
+D:\11b\Мелих\zadachi_za_podgotowka\obj\Debug\zadachi_za_podgotowka.Form1.resources
+D:\11b\Мелих\zadachi_za_podgotowka\obj\Debug\zadachi_za_podgotowka.Properties.Resources.resources
+D:\11b\Мелих\zadachi_za_podgotowka\obj\Debug\zadachi_za_podgotowka.csproj.GenerateResource.cache
+D:\11b\Мелих\zadachi_za_podgotowka\obj\Debug\zadachi_za_podgotowka.csproj.CoreCompileInputs.cache
+D:\11b\Мелих\zadachi_za_podgotowka\obj\Debug\zadachi_za_podgotowka.exe
+D:\11b\Мелих\zadachi_za_podgotowka\obj\Debug\zadachi_za_podgotowka.pdb
